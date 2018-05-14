@@ -1,14 +1,1 @@
-<form #employeeForm="ngForm" (ngSubmit)="kirimData($event)">
-  <div>
-    <label for="id">ID</label>
-    <input type="text" name="id" id="id" [(ngModel)]="employees.id"/>
-  </div>
-  <div>
-    <label for="employee">Employee</label>
-    <input type="text" name="nama" id="employee" [(ngModel)]="employees.nama"/>
-  </div>
-  <button type="submit">Kirim</button>
-</form>
-<ul>
-  <li *ngFor="let lis of employee">{{lis.id}}-{{lis.nama}}</li>
-</ul>
+<app-master></app-master>

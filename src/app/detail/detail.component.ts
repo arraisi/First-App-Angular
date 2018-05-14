@@ -5,22 +5,23 @@ import { Master } from '../master/master.model';
   selector: 'app-detail',
   templateUrl: './detail.component.html'
 })
-export class DetailComponent {
+export class DetailComponent implements OnInit {
 
   @Output()
   submited = new EventEmitter<Master>();
 
   value: Master;
 
-  OnInit() {
+  ngOnInit() {
     this.value = new Master(null, null);
   }
   
   kirimData(data){
     console.log(this.value);
-    this.value = new Master(null, null);
+    
     if(this.value.id && this.value.nama){
       this.submited.emit(this.value);
+      this.value = new Master(null, null);
     }
   }
 
