@@ -8,5 +8,8 @@ import {Master} from './master.model';
 export class MasterComponent {
   data: Master[]=[];
 
+  getData(data){
+    this.data.push(data);
+  }
 
 }

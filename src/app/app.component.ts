@@ -10,14 +10,6 @@ export class AppComponent {
 
   employees: Employees = new Employees();
   
-  kirimData(employees){
-    console.log(this.employees);
-    if(this.employees.id && this.employees.nama){
-      this.employee.push(this.employees);
-    }
-    this.employees = new Employees();
-  }
-  
 }
 export class Employees{
   constructor(public id?: number, public nama?: string){}

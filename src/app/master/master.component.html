@@ -1,5 +1,5 @@
 <head>Master File</head>
-<ul>
-  
-  <app-detail *ngFor="let lis of data" [interaksiNilai]="lis"></app-detail>
-</ul>
+<hr>
+<div>
+  <app-detail (submited)="getData($event)"></app-detail>
+</div>
