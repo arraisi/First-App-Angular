@@ -13,4 +13,16 @@
   </tr>
 </table>
 <hr>
-<button (click)="saveData()">Kirim Data</button>
+<form #formAnggota="ngForm" (submit)="saveData(formAnggota.value)">
+  <div>
+    <label for="nama">Nama Anggota</label>
+    <input type="text" name="nama" id="nama" ngModel>
+  </div>
+  <div>
+    <label for="alamat">Alamat Anggota</label>
+    <input type="text" name="alamat" id="alamat" ngModel>
+  </div>
+  <div>
+    <button type="submit">Kirim Data</button>
+  </div>
+</form>

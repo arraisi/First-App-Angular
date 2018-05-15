@@ -13,19 +13,22 @@ export class MasterComponent implements OnInit {
     this.allAnggota = [];
   }
 
-  saveData() {
+  loadData() {
+    this.setService.getAllAnggota().subscribe((dataRespon: Master[]) => {
+      this.allAnggota = dataRespon;
+    });
+  }
+  saveData(anggota) {
 
-    const anggota = { kode: null, nama: 'Dhio', alamat: 'Jakarta', tanggalLahir: new Date() }
+    anggota.tanggalLahir = new Date();
 
-    this.setService.saveAnggota(anggota).subscribe(dataRespon => { console.log(anggota); }, error => {
+    this.setService.saveAnggota(anggota).subscribe(dataRespon => { console.log(anggota); this.loadData() }, error => {
       console.log(error);
     });
   }
 
   ngOnInit() {
-    this.setService.getAllAnggota().subscribe((dataRespon: Master[]) => {
-      this.allAnggota = dataRespon;
-    });
+    this.loadData();
   }
 
 }
