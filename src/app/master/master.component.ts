@@ -22,6 +22,8 @@ export class MasterComponent implements OnInit {
 
   ngOnInit(){
     this.currentValue = this.setService.data;
+    this.setService.getAnggota().subscribe(data=>
+    {console.log(data)})
   }
 
 }
