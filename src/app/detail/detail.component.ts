@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Master } from '../master/master.model';
+import { MasterService } from '../master/master.service';
 
 @Component({
   selector: 'app-detail',
@@ -7,6 +8,9 @@ import { Master } from '../master/master.model';
 })
 export class DetailComponent implements OnInit {
 
+  constructor(private setService: MasterService){
+    
+  }
 
 
   @Output()
