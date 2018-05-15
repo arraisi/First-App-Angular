@@ -7,6 +7,8 @@ import { Master } from '../master/master.model';
 })
 export class DetailComponent implements OnInit {
 
+
+
   @Output()
   submited = new EventEmitter<Master>();
 
@@ -18,7 +20,6 @@ export class DetailComponent implements OnInit {
   
   kirimData(data){
     console.log(this.value);
-    
     if(this.value.id && this.value.nama){
       this.submited.emit(this.value);
       this.value = new Master(null, null);

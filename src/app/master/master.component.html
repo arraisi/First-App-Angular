@@ -1,5 +1,8 @@
-<head>Master File</head>
-<hr>
+<h2>Master File</h2>
+<hr/>
 <div>
   <app-detail (submited)="getData($event)"></app-detail>
-</div>
+  <h1>DAFTAR EMPLOYEE</h1>
+<ul>
+  <app-list *ngFor="let daftar of data" [nilai]="daftar"></app-list>
+</ul>
