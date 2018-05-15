@@ -1,10 +1,18 @@
-<h2>Master File</h2>
-<div>ID Employee    : {{currentValue.id}}</div>
-<div>Nama Employee  : {{currentValue.nama}}</div>
-<hr/>
 <div>
-  <app-detail (submited)="getData($event)"></app-detail>
-  <h1>DAFTAR EMPLOYEE</h1>
-<ul>
-  <app-list *ngFor="let daftar of data" [nilai]="daftar"></app-list>
-</ul>
+  <div>
+    <label for="kode">Kode Anggota</label>
+    <input readonly type="text" name="kode" id="kode" [value]="anggota.kode">
+  </div>
+  <div>
+    <label for="nama">Nama Anggota</label>
+    <input readonly type="text" name="nama" id="nama" [value]="anggota.nama">
+  </div>
+  <div>
+    <label for="alamat">Alamat Anggota</label>
+    <input readonly type="text" name="alamat" id="alamat" [value]="anggota.alamat">
+  </div>
+  <div>
+    <label for="tanggalLahir">Tanggal Lahir Anggota</label>
+    <input readonly type="text" name="tanggalLahir" id="tanggalLahir" [value]="anggota.tanggalLahir">
+  </div>
+</div>
