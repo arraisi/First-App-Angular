@@ -8,7 +8,11 @@ export class MasterService{
     constructor(private _http: HttpClient){}
 
     getAnggota(){
-        return this._http.get('api/anggota/1');
+        return this._http.get('/api/anggota/1');
+    }
+
+    getAllAnggota(){
+        return this._http.get('/api/anggota/list')
     }
 
  

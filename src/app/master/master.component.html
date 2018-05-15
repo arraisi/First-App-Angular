@@ -1,18 +1,14 @@
-<div>
-  <div>
-    <label for="kode">Kode Anggota</label>
-    <input readonly type="text" name="kode" id="kode" [value]="anggota.kode">
-  </div>
-  <div>
-    <label for="nama">Nama Anggota</label>
-    <input readonly type="text" name="nama" id="nama" [value]="anggota.nama">
-  </div>
-  <div>
-    <label for="alamat">Alamat Anggota</label>
-    <input readonly type="text" name="alamat" id="alamat" [value]="anggota.alamat">
-  </div>
-  <div>
-    <label for="tanggalLahir">Tanggal Lahir Anggota</label>
-    <input readonly type="text" name="tanggalLahir" id="tanggalLahir" [value]="anggota.tanggalLahir">
-  </div>
-</div>
+<table border="1">
+  <tr>
+    <td> Kode </td>
+    <td> Nama </td>
+    <td> Alamat </td>
+    <td> Tanggal Lahir </td>
+  </tr>
+  <tr *ngFor="let anggota of allAnggota">
+    <td> {{anggota.kode}} </td>
+    <td> {{anggota.nama}} </td>
+    <td> {{anggota.alamat}} </td>
+    <td> {{anggota.tanggalLahir}} </td>
+  </tr>
+</table>

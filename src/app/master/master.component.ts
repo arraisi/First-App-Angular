@@ -7,15 +7,15 @@ import {MasterService} from './master.service';
   templateUrl: './master.component.html'
 })
 export class MasterComponent implements OnInit {
-  anggota:Master;
+  allAnggota:Master[];
 
   constructor(private setService: MasterService){
-    this.anggota = new Master();
+    this.allAnggota = [];
   }
 
  ngOnInit(){
-    this.setService.getAnggota().subscribe((dataRespon:Master)=>
-    {this.anggota = dataRespon;
+    this.setService.getAllAnggota().subscribe((dataRespon:Master[])=>
+    {this.allAnggota = dataRespon; 
     });
   }
 
