@@ -9,8 +9,7 @@ export class AppComponent {
   employee: Employees[] = [];
 
   employees: Employees = new Employees();
-  
 }
-export class Employees{
-  constructor(public id?: number, public nama?: string){}
+export class Employees {
+  constructor(public id?: number, public nama?: string) { }
 }

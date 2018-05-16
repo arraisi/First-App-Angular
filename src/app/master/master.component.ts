@@ -18,11 +18,12 @@ export class MasterComponent implements OnInit {
       this.allAnggota = dataRespon;
     });
   }
+
   saveData(anggota) {
 
     anggota.tanggalLahir = new Date();
 
-    this.setService.saveAnggota(anggota).subscribe(dataRespon => { console.log(anggota); this.loadData() }, error => {
+    this.setService.saveAnggota(anggota).subscribe(dataRespon => { console.log(anggota); this.loadData(); }, error => {
       console.log(error);
     });
   }
